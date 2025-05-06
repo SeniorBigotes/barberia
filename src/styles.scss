@@ -1,0 +1,20 @@
+//VARIABLES
+@use  '@style/_normalize.scss' as *;
+@use  '@style/_base.scss' as *;
+@use '@style/index.scss' as *;
+
+html {
+    max-width: 140rem;
+    font-size: 1.2rem;
+    // scroll-behavior: smooth;
+    // transition: all .5s ease;
+
+     @include media-desktop {
+        font-size: 1rem;
+    }
+}
+
+// #home, #services, #location {
+//     scroll-margin-top: 8rem;
+// }
+

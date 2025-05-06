@@ -1,0 +1,74 @@
+@use "sass:color";
+@use '../../../assets/styles/index.scss' as s;
+
+.home {
+  width: 100%;
+
+  .home-image {
+    background-image: url(/img/inicio.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+
+    @include s.media-resolution(s.$tablet-min-width) {
+      height: 40rem;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 80vh;
+      background-color: color.mix(transparent, #000000, 30%);
+      z-index: 1;
+    }
+
+  }
+}
+.home .home-image {
+  .home-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+
+    height: 100%;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+
+    h3 {
+      color: white;
+      font-weight: 600;
+    }
+
+    h3.box {
+      border: solid 2px white;
+      padding: .5rem;
+
+      @include s.media-resolution(s.$tablet-min-width) {
+        padding: 1.5rem;
+      }
+    }
+}
+
+    h3.box-bottom {
+      border-bottom: solid 2px white;
+      padding: .5rem;
+
+      @include s.media-resolution(s.$tablet-min-width) {
+        padding: 1.5rem;
+      }
+    }
+}

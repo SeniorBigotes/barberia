@@ -1,0 +1,11 @@
+@use '@style/index.scss' as s;
+
+.header {
+  position: sticky !important;
+  top: -6rem;
+  z-index: 3;
+
+  @include s.media-resolution(s.$tablet-min-width) {
+    top: 0;
+  }
+}

@@ -1,0 +1,44 @@
+/* Ayuda a que al agregar imagenes y cambiar el padding junto con height,
+margin etc... (cambiando tamaños) no se sumen los pixeles */
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+/*Este codigo ayuda a reestablecer los valores de la unidad rem
+por lo que 1rem = 10px, esto se ajusta mejor que los pixeles */
+html{
+  font-size: 62.5%;
+
+  max-width: 200rem;
+  margin: auto;
+}
+
+/* Scroll para celulares */
+html{
+  scroll-snap-type: y mandatory; /*eje y*/
+  scroll-snap-type: x mandatory; /*eje x*/
+}
+.clase-a-usar{
+  scroll-snap-align: center; /*Se pone en el centro de dicha seccion*/
+  scroll-snap-stop: always; /*Hace que se pare en dicha seccion*/
+}
+/*CLASES PARA TODOS LOS PROYECTOS*/
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+html body ul {
+  padding: 0rem;
+  margin: 0rem;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, label, input, button, span, a {
+  margin: 0;
+  padding: 0;
+}

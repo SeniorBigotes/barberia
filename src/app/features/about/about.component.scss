@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use '@style/index.scss' as s;
+
+.about {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.values {
+  flex-direction: column;
+
+  @include s.media-resolution(s.$tablet-min-width) {
+    margin: 4rem auto;
+    flex-direction: row;
+  }
+
+  @include s.media-resolution(s.$tablet-max-width) {
+    width: 70%;
+  }
+
+  .mission, .vision {
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+      background-color: color.mix(transparent, s.$main-color-hover, 85%);
+    }
+  }
+}
