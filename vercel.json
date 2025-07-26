@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/barberia-front/server/server.mjs",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/barberia-front/server/**"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/barberia-front/server/server.mjs"
+    }
+  ]
+}
